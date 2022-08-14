@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Aging Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<header>
+    <!-- Jumbotron -->
+    <div class="text-center bg-gray-50 text-gray-800 py-20 px-6">
+        <h1 class="text-5xl font-bold mt-0 mb-6">結果</h1>
+    </div>
+    <!-- Jumbotron -->
+</header>
+
+<div class="grid min-h-[140px] mx-5 scroll-mt-48 place-items-center overflow-x-scroll md:rounded-lg border border-blue-grey-50 bg-gray-200 p-6 lg:overflow-visible w-full mx-auto">
+    <p>あなたの年齢は</p>
+    <h1 id="age" class="text-3xl"></h1>
+    <p>歳です。</p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+<script>
+    function url_query_param() {
+        let search = location.search;
+        search = search.replace('?', '');
+        let ar_search = search.split('&');
+        let param = 0;
+        ar_search.forEach(function (val) {
+            var sep_val = val.split('=');
+            param += Number(sep_val[1]);
+        });
+        return param;
+    }
+    const ageElm = document.getElementById("age");
+    ageElm.textContent = url_query_param();
+</script>
+
+</body>
+</html>
