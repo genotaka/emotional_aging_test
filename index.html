@@ -6,54 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emotional Aging Test</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <style>
+        * {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 <header>
     <!-- Jumbotron -->
-    <div class="text-center bg-gray-50 text-gray-800 py-20 px-6">
-        <h1 class="text-5xl font-bold mt-0 mb-6">情感老化度测试</h1>
-        <h3 class="text-3xl font-bold mb-8">请在符合处画○</h3>
+    <div class="text-center bg-white text-gray-800 pt-16 px-6">
+        <img src="assets/img/q_top.svg" alt="">
+        <h1 class="text-3xl mt-0 pt-12 pb-6">情感年龄测试</h1>
+        <h3 class="text-xl mb-8 text-orange-500 underline">请三选一</h3>
     </div>
     <!-- Jumbotron -->
 </header>
 
-<div class="grid min-h-[140px] mx-5 scroll-mt-48 place-items-center overflow-x-scroll md:rounded-lg border border-blue-grey-50 bg-gray-200 p-6 lg:overflow-visible w-full mx-auto">
+<div class="grid min-h-[140px] mx-5 scroll-mt-48 place-items-center overflow-x-scroll bg-white p-6 pb-12 lg:overflow-visible w-full mx-auto">
     <form method="GET" action="result.html">
         <div class="form-group">
             <div id="base_component" class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"></div>
 
             <div class="mt-10 flex items-center justify-center">
-                <button type="submit" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">実行</button>
+                <button type="submit" class="inline-block px-6 py-2.5 bg-orange-600 text-white font-medium text-md leading-tight uppercase rounded-full shadow-md hover:bg-orange-400 hover:shadow-lg focus:bg-orange-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-400 active:shadow-lg transition duration-150 ease-in-out">提交</button>
             </div>
         </div>
     </form>
 </div>
 
+<footer class="bg-orange-700 text-center lg:text-left">
+    <div class="text-gray-200 text-center p-4">
+        &copy; 2022 SIQIUHUI SALON All Rights Reserved.
+    </div>
+</footer>
+
 <template id="q_tpl">
     <div class="radio_content">
         <p class="alert alert-warning text-center pb-4 md:text-lg"></p>
         <!-- radio component -->
-        <div class="grid w-full grid-cols-3 space-x-3 rounded-xl bg-gray-200 p-2">
+        <div class="grid w-full grid-cols-3 space-x-3 rounded-xl p-2">
             <div>
                 <input type="radio" id="_yes" name="" value="" class="yes peer hidden" />
                 <label for="_yes" class="yes block cursor-pointer select-none rounded-xl p-3 text-center
-                border-2 border-pink-600 text-pink-600 font-medium leading-tight rounded hover:bg-pink focus:outline-none focus:ring-0 transition duration-150
-                peer-checked:bg-pink-500 peer-checked:font-bold peer-checked:text-white">是</label>
+                border-2 border-orange-500 text-orange-500 font-medium leading-tight rounded hover:bg-orange-600 focus:outline-none focus:ring-0 transition duration-150
+                peer-checked:bg-orange-500 peer-checked:font-bold peer-checked:text-white">是</label>
             </div>
             <div>
                 <input type="radio" id="_neither" name="" value=""  class="nt peer hidden" />
                 <label for="_neither" class="nt block cursor-pointer select-none rounded-xl p-3 text-center
-                border-2 border-pink-600 text-pink-600 font-medium leading-tight rounded hover:bg-pink focus:outline-none focus:ring-0 transition duration-150
-                peer-checked:bg-pink-500 peer-checked:font-bold peer-checked:text-white">都不符合</label>
+                border-2 border-orange-500 text-orange-500 font-medium leading-tight rounded hover:bg-orange-600 focus:outline-none focus:ring-0 transition duration-150
+                peer-checked:bg-orange-500 peer-checked:font-bold peer-checked:text-white">都不符合</label>
             </div>
             <div>
                 <input type="radio" id="_no" name="" value=""  class="no peer hidden" />
                 <label for="_no" class="no block cursor-pointer select-none rounded-xl p-3 text-center
-                border-2 border-pink-600 text-pink-600 font-medium leading-tight rounded hover:bg-pink focus:outline-none focus:ring-0 transition duration-150
-                peer-checked:bg-pink-500 peer-checked:font-bold peer-checked:text-white">否</label>
+                border-2 border-orange-500 text-orange-500 font-medium leading-tight rounded hover:bg-orange-600 focus:outline-none focus:ring-0 transition duration-150
+                peer-checked:bg-orange-500 peer-checked:font-bold peer-checked:text-white">否</label>
             </div>
         </div>
     </div>
