@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
     <style>
         * {
             font-family: 'Oswald', 'Noto Sans SC', sans-serif;
@@ -30,7 +31,7 @@
 <div class="grid min-h-[140px] mx-5 scroll-mt-48 place-items-center bg-white p-6 pb-0 lg:overflow-visible w-full mx-auto">
     <p class="p-8 text-3xl">你的情感年龄是</p>
     <div id="age" class="flex flex-auto"></div>
-    <p class="p-8 text-3xl">岁</p>
+    <p class="p-8 py-4 text-4xl text-orange-500 font-semibold">岁</p>
     <img id="ageImage" src="assets/img/20.svg" alt="">
 </div>
 
@@ -56,54 +57,89 @@
     </div>
 </section>
 
-<section class="my-10">
-    <div class="m-4 pb-6">
-        <h2 class="bg-orange-100 p-4 m-2 text-orange-600 text-lg">
-            <span class="bg-orange-600 text-white font-bold p-2 mr-1">±2岁</span>
-            与实际年龄±2岁以内
+<div class="accordion accordion-flush bg-white py-4" id="accordion">
+    <div class="p-2">
+        <h2 class="accordion-header bg-orange-100 p-2 m-4 text-orange-600 text-lg" id="heading1">
+            <button class="accordion-button flex items-center w-full text-base text-gray-800 text-left border-0 rounded-none transition collapsed
+            " type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                <span class="bg-orange-600 text-white font-bold p-2 mr-1">±2岁</span>
+                与实际年龄±2岁以内
+            </button>
         </h2>
-        <p class="text-white m-4">
-            你是一位身心如一，身体和情感年龄高度重合的人。从测试结果可以看出，你有较好的身心保养意识，并一定为之付出了行动。希望你继续保持，延缓心身衰老。
-        </p>
+        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion">
+            <div class="accordion-body px-5">
+                <p>
+                    你是一位身心如一，身体和情感年龄高度重合的人。从测试结果可以看出，你有较好的身心保养意识，并一定为之付出了行动。希望你继续保持，延缓心身衰老。
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="bg-white py-10 px-4">
-        <h2 class="bg-orange-100 p-4 m-2 text-orange-600 text-lg">
-            <span class="bg-orange-600 text-white font-bold p-2 mr-1">-5岁</span>
-            小于实际年龄5岁
+    <div class="p-2">
+        <h2 class="accordion-header bg-orange-100 p-2 m-4 text-orange-600 text-lg" id="heading2">
+            <button class="accordion-button flex items-center w-full text-base text-gray-800 text-left border-0 rounded-none transition collapsed
+            " type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                <span class="bg-orange-600 text-white font-bold p-2 mr-1">-5岁</span>
+                小于实际年龄5岁
+            </button>
         </h2>
-        <p class="text-orange-500 m-4">
-            恭喜你，你的情感年龄远年轻于你的真实年龄。这说明你平时十分注意你的脑部锻炼和保养，有较好的情绪调控能力和意识，不排斥接触新事物，注意饮食和营养元素的补充。希望你再接再厉，继续保持，情感上越来越年轻。
-        </p>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion">
+            <div class="accordion-body px-5">
+                <p>
+                    恭喜你，你的情感年龄远年轻于你的真实年龄。这说明你平时十分注意你的脑部锻炼和保养，有较好的情绪调控能力和意识，不排斥接触新事物，注意饮食和营养元素的补充。希望你再接再厉，继续保持，情感上越来越年轻。
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="mx-4 my-12">
-        <h2 class="bg-orange-100 p-4 m-2 text-orange-600 text-lg">
-            <span class="bg-orange-600 text-white font-bold p-2 mr-1">-10岁</span>
-            小于实际年龄10岁及以上
+    <div class="p-2">
+        <h2 class="accordion-header bg-orange-100 p-2 m-4 text-orange-600 text-lg" id="heading3">
+            <button class="accordion-button flex items-center w-full text-base text-gray-800 text-left border-0 rounded-none transition collapsed
+            " type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                <span class="bg-orange-600 text-white font-bold p-2 mr-1">-10岁</span>
+                小于实际年龄10岁及以上
+            </button>
         </h2>
-        <p class="text-white m-4">
-            如果你的实际年龄超过35岁，那么恭喜你，因为处于思秋期（35岁~65岁阶段）的你，拥有很好的脑部健康和激素平衡，相信这与你的健康饮食和营养补充；定期锻炼与保健；愿意不断尝试并接受新事物的挑战，有着很大的关系。换言之，正因为你处于一个健康的思秋期，才使得你在情感年龄上年轻于绝大多数的人。健康的思秋期可以让人从内而外散发年轻的气息，请继续保持。
-        </p>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion">
+            <div class="accordion-body px-5">
+                <p>
+                    如果你的实际年龄超过35岁，那么恭喜你。因为处于思秋期（35岁~65岁阶段）的你，拥有很好的脑部健康和激素平衡。相信这与你的健康饮食和营养补充、定期锻炼与保健、愿意不断尝试并接受新事物的挑战，有着很大的关系。换言之，正因为你处于一个健康的思秋期，才使得你在情感年龄上年比绝大多数人年轻。健康的思秋期可以让人从内而外散发年轻的气息，请继续保持。
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="bg-white py-10 px-4">
-        <h2 class="bg-orange-100 p-4 m-2 text-orange-600 text-lg">
-            <span class="bg-orange-600 text-white font-bold p-2 mr-1">+5岁</span>
-            大于实际年龄5岁
+    <div class="p-2">
+        <h2 class="accordion-header bg-orange-100 p-2 m-4 text-orange-600 text-lg" id="heading4">
+            <button class="accordion-button flex items-center w-full text-base text-gray-800 text-left border-0 rounded-none transition collapsed
+            " type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                <span class="bg-orange-600 text-white font-bold p-2 mr-1">+5岁</span>
+                大于实际年龄5岁
+            </button>
         </h2>
-        <p class="text-orange-500 m-4">
-            请不要忽视这5岁的情绪年龄的老化，不要不以为意。因为忽视意味着衰老。如果你的实际年龄超过了35岁，请一定注意提高警惕。人的35~65岁的阶段，被专家称之为“思秋期”的阶段。这一阶段人会在无意识间，对各种事物的积极性逐渐衰退，这是情感老化的一种表现。而积极性衰退的原因，是由于大脑前额叶的衰退和激素分泌异常导致的。如果忽略了这一情感老化，不积极应对，人就会在短时间内衰老下去，一发不可收拾。5岁年龄差的情感老化，还在可控范围。建议你要注意饮食，多补充促进激素分泌和抗氧化的食材，如石榴，鳄梨，金枪鱼，肉苁蓉，牡蛎，蜂王浆等，必要的时候可以摄取一些安全有效的机能性辅助食品。要积极跳出常规思考的怪圈，走出舒适圈，多积极接受新事物，新观念来锻炼大脑。
-        </p>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion">
+            <div class="accordion-body px-5">
+                <p>
+                    请不要忽视这5岁情绪年龄的老化，因为忽视意味着衰老。如果你的实际年龄超过了35岁，请一定注意提高警惕。人的35~65岁的阶段，被专家称之为“思秋期”的阶段。这一阶段人会在无意识间，对各种事物的积极性逐渐衰退，这是情感老化的一种表现。而积极性衰退的原因，是因大脑前额叶的衰退和激素分泌异常导致的，如果忽略了这一情感老化，不积极应对，人就会在短时间内衰老下去，一发不可收拾。5岁年龄差的情感老化，还在可控范围。建议你要注意饮食，多补充促进激素分泌和抗氧化的食材，如石榴，鳄梨，金枪鱼，肉苁蓉，牡蛎，蜂王浆等，必要的时候可以摄取一些安全有效的机能性辅助食品。要积极跳出常规思考的怪圈，走出舒适圈，多积极接受新事物、新观念来锻炼大脑。
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="mx-4 my-12">
-        <h2 class="bg-orange-100 p-4 m-2 text-orange-600 text-lg">
-            <span class="bg-orange-600 text-white font-bold p-2 mr-1">+10岁</span>
-            大于实际年龄10岁及以上
+    <div class="p-2">
+        <h2 class="accordion-header bg-orange-100 p-2 m-4 text-orange-600 text-lg" id="heading5">
+            <button class="accordion-button flex items-center w-full text-base text-gray-800 text-left border-0 rounded-none transition collapsed
+            " type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                <span class="bg-orange-600 text-white font-bold p-2 mr-1">+10岁</span>
+                大于实际年龄10岁及以上
+            </button>
         </h2>
-        <p class="text-white m-4">
-            请不要急于否定这个测试结果。如果你已经想否定这个结果，认为其是不准确的，不愿意承认你的情感年龄已大于实际年龄10岁及其以上，那么这一表现恰恰证明了你的情感老化。据专家证明，思秋期（35岁~65岁）阶段情感老化的一种典型表现便是：不愿意接受新事物或者新刺激，极力坚持自己的固有认知，并不愿意改变现状认知。思秋期情感的老化是由于大脑前额叶的衰退和激素分泌异常导致的。如果不积极应对，人就会快速步入老年期。
-            对于这个检测结果的你，我们给出的建议是，应该积极了解，面对“思秋期”，并系统地积极应对思秋期的一系列变化，以达到调整衰老进程的目的。建议你应该尝试接受新的观点；保持尝试任何挑战的好奇心和行动力；有意识地发现新挑战并付诸实际行动。为了减缓大脑的衰老，应该多摄取利于促进激素分泌和抗氧化的食材，如石榴，鳄梨，金枪鱼，肉苁蓉，牡蛎，蜂王浆等，必要的时候可以摄取一些安全有效的机能性辅助食品。此外，肠道菌群对身体的影响比基因遗传还要强大。益生菌，纳豆，酸奶等发酵食品以及海带，大麦等膳食纤维含量较高的食品，对你而言都是不错的选择。
-        </p>
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion">
+            <div class="accordion-body px-5">
+                <p>
+                    请不要急于否定这个测试结果。如果你已经想否定这个结果，认为其是不准确的，不愿意承认你的情感年龄已大于实际年龄10岁及其以上，那么这一表现恰恰证明了你的情感老化。据专家证明，思秋期（35岁~65岁）阶段情感老化的一种典型表现便是：不愿意接受新事物或者新刺激，极力坚持自己的固有认知，并不愿意改变现状认知。思秋期情感的老化是因大脑前额叶的衰退和激素分泌异常导致的。如果不积极应对，人就会快速步入老年期。
+                    对于这个检测结果的你，我们给出的建议是：应该积极了解和面对“思秋期”，并系统地积极应对思秋期的一系列变化，以达到调整衰老进程的目的。建议你应该尝试接受新的观点；保持尝试任何挑战的好奇心和行动力；有意识地发现新挑战并付诸实际行动。为了减缓大脑的衰老，应该多摄取利于促进激素分泌和抗氧化的食材，如石榴，鳄梨，金枪鱼，肉苁蓉，牡蛎，蜂王浆等，必要的时候可以摄取一些安全有效的机能性辅助食品。此外，肠道菌群对身体的影响比基因遗传还要强大。益生菌、纳豆、酸奶等发酵食品以及海带、大麦等膳食纤维含量较高的食品，对你而言都是不错的选择。
+                </p>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 
 <footer class="bg-orange-700 text-center lg:text-left">
     <div class="text-gray-200 text-center p-4">
